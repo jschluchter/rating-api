@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "NODE_ENV='development' MONGODB_URI='mongodb://localhost:27017/webratings' node ./bin/www",
-    "prod": "NODE_ENV='production' node ./bin/www"
+    "prod": "NODE_ENV='production' node ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -16,6 +18,8 @@
     "hbs": "~4.0.1",
     "mongoose": "^4.13.8",
     "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
-  }
+    "serve-favicon": "~2.4.5",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
